@@ -23,7 +23,11 @@ public class Producto {
     private String descripcion;
 
     @Column(length = 255)
-    private String imagenUrl; // 🌟 URL o ruta de imagen
+    private String imagenUrl;
+
+    // ✅ NUEVO: Stock disponible
+    @Column(nullable = false)
+    private Integer stock;
 
     // Getters y Setters
     public Long getId() { return id; }
@@ -43,4 +47,7 @@ public class Producto {
 
     public String getImagenUrl() { return imagenUrl; }
     public void setImagenUrl(String imagenUrl) { this.imagenUrl = imagenUrl; }
+
+    public Integer getStock() { return stock; }
+    public void setStock(Integer stock) { this.stock = stock; }
 }
